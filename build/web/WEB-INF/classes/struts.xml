@@ -1,0 +1,24 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+        
+        <action name="hello" class="com.rimsoft.Action.HelloWorldAction" method="execute">
+            <result name="success">/pages/HelloWorld.jsp</result>
+        </action>
+
+        <action name="home" class="com.rimsoft.Action.LogementAction" method="execute">
+            <result name="success">/index.jsp</result>
+        </action>
+
+
+        <action name="ajouter" class="com.rimsoft.Action.AjouterAction" method="execute">
+            <result name="success">/pages/ajouter.jsp</result>
+        </action>
+    </package>  
+</struts>
